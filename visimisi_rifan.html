@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Universitas Perjuangan Tasikmalaya</title>
+<title>Hubungi Kami - Universitas Perjuangan Tasikmalaya</title>
 
 <!-- Font Google -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@ body {
   line-height: 1.6;
 }
 
-/* Container utama tetap sama */
+/* Container utama */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -70,6 +70,7 @@ body {
 /* --- Main Layout Wrapper --- */
 .wrapper {
   display: flex;
+  align-items: flex-start;
 }
 
 /* --- Navigation Menu Styling --- */
@@ -122,22 +123,58 @@ body {
   margin-bottom: 15px;
 }
 
-#main ul, #main ol {
-  margin-left: 20px;
-  margin-bottom: 15px;
+/* --- Contact Info & Form Styling --- */
+.contact-info {
+  background-color: #e0f2f1;
+  border-left: 5px solid #00796b;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
 }
 
-#main li {
-  margin-bottom: 8px;
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1.05em;
 }
 
-#main a {
-  color: #00796b;
-  text-decoration: none;
+.contact-form {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
 }
 
-#main a:hover {
-  text-decoration: underline;
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #004d40;
 }
 
 /* --- Footer Styling --- */
@@ -153,7 +190,7 @@ body {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-/* --- Responsive dengan Bootstrap Utility --- */
+/* --- Responsive --- */
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column;
@@ -173,7 +210,6 @@ body {
 </head>
 
 <body>
-
 <div class="container shadow-lg">
   <!-- HEADER -->
   <header id="top" class="d-flex align-items-center">
@@ -189,53 +225,49 @@ body {
     <!-- NAVIGATION -->
     <nav id="menubar">
       <ul id="menulist">
-        <li class="menuitem active"><a href="index.html">Home</a></li>
+        <li class="menuitem"><a href="index.html">Home</a></li>
         <li class="menuitem"><a href="struktur_rifan.html">Struktur Organisasi</a></li>
         <li class="menuitem"><a href="visimisi_rifan.html">Visi Misi</a></li>
         <li class="menuitem"><a href="fakultas_rifan.html">Fakultas</a></li>
         <li class="menuitem"><a href="bem_rifan.html">BEM</a></li>
         <li class="menuitem"><a href="ukm_rifan.html">UKM</a></li>
         <li class="menuitem"><a href="pmb_rifan.html">PMB</a></li>
-        <li class="menuitem"><a href="hubungi_rifan.html">Hubungi Kami</a></li>
+        <li class="menuitem active"><a href="hubungi_rifan.html">Hubungi Kami</a></li>
       </ul>
     </nav>
 
     <!-- MAIN CONTENT -->
     <main id="main">
       <section>
-        <h2>Selamat Datang di Universitas Perjuangan</h2>
-        <p>
-          Universitas Perjuangan Tasikmalaya (UNPER) adalah universitas swasta yang terletak di Kota Tasikmalaya, Jawa Barat.
-          Universitas ini berada di bawah naungan Yayasan Universitas Siliwangi. Setelah melepas Universitas Siliwangi menjadi perguruan tinggi negeri,
-          yayasan ini merasakan perlunya mendirikan universitas swasta tersendiri untuk meningkatkan kuantitas wisudawan yang berhasil diluluskan.
-        </p>
-        <p>
-          Universitas Perjuangan Tasikmalaya didirikan melalui SK Mendikbud RI No. 603/E/O/2014 tanggal 17 Oktober 2014.
-          Saat ini, UNPER menyelenggarakan 5 fakultas dan 10 program studi yang berkualitas dan relevan dengan kebutuhan industri.
-        </p>
+        <h2>Hubungi Kami</h2>
 
-        <h3>5 Fakultas di UNPER:</h3>
-        <ul class="list-group list-group-flush mb-3">
-          <li class="list-group-item">Fakultas Keguruan dan Ilmu Pendidikan</li>
-          <li class="list-group-item">Fakultas Ekonomi</li>
-          <li class="list-group-item">Fakultas Teknik</li>
-          <li class="list-group-item">Fakultas Ilmu Kesehatan</li>
-          <li class="list-group-item">Fakultas Pertanian</li>
-        </ul>
+        <div class="contact-info">
+          <p><strong>Alamat:</strong><br>
+          Jl. Peta No.177, Kahuripan, Kec. Tawang, Kota Tasikmalaya, Jawa Barat 46115</p>
 
-        <h3>10 Program Studi di UNPER:</h3>
-        <ol class="list-group list-group-numbered">
-          <li class="list-group-item">S1 Pendidikan Guru Sekolah Dasar (PGSD)</li>
-          <li class="list-group-item">S1 Pendidikan Bahasa Inggris (PBI)</li>
-          <li class="list-group-item">S1 Manajemen</li>
-          <li class="list-group-item">S1 Akuntansi</li>
-          <li class="list-group-item">S1 Teknik Informatika</li>
-          <li class="list-group-item">S1 Teknik Sipil</li>
-          <li class="list-group-item">S1 Farmasi</li>
-          <li class="list-group-item">S1 Agroteknologi</li>
-          <li class="list-group-item">S1 Agribisnis</li>
-          <li class="list-group-item">S1 Peternakan</li>
-        </ol>
+          <p><strong>Telepon:</strong><br>
+          (0265) 7522770</p>
+
+          <p><strong>Email:</strong><br>
+          info@unper.ac.id</p>
+
+          <p><strong>Website Resmi:</strong><br>
+          <a href="https://unper.ac.id" target="_blank">https://unper.ac.id</a></p>
+        </div>
+
+        <h3>Kirim Pesan</h3>
+        <form class="contact-form">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+          <button type="submit">Kirim Pesan</button>
+        </form>
       </section>
     </main>
   </div>

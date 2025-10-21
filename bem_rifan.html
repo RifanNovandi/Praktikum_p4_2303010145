@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Universitas Perjuangan Tasikmalaya</title>
+<title>BEM - Universitas Perjuangan Tasikmalaya</title>
 
 <!-- Font Google -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@ body {
   line-height: 1.6;
 }
 
-/* Container utama tetap sama */
+/* Container utama */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -42,7 +42,7 @@ body {
   overflow: hidden;
 }
 
-/* --- Header Styling --- */
+/* --- Header --- */
 #top {
   display: flex;
   align-items: center;
@@ -67,12 +67,12 @@ body {
   opacity: 0.9;
 }
 
-/* --- Main Layout Wrapper --- */
+/* --- Layout --- */
 .wrapper {
   display: flex;
 }
 
-/* --- Navigation Menu Styling --- */
+/* --- Sidebar Menu --- */
 #menubar {
   width: 220px;
   background-color: #f4f4f4;
@@ -105,7 +105,7 @@ body {
   border-left: 4px solid #004d40;
 }
 
-/* --- Main Content Styling --- */
+/* --- Konten Utama --- */
 #main {
   flex-grow: 1;
   padding: 30px;
@@ -122,25 +122,7 @@ body {
   margin-bottom: 15px;
 }
 
-#main ul, #main ol {
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-#main li {
-  margin-bottom: 8px;
-}
-
-#main a {
-  color: #00796b;
-  text-decoration: none;
-}
-
-#main a:hover {
-  text-decoration: underline;
-}
-
-/* --- Footer Styling --- */
+/* --- Footer --- */
 #bottom {
   text-align: center;
   padding: 20px;
@@ -153,7 +135,7 @@ body {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-/* --- Responsive dengan Bootstrap Utility --- */
+/* --- Responsive --- */
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column;
@@ -189,11 +171,11 @@ body {
     <!-- NAVIGATION -->
     <nav id="menubar">
       <ul id="menulist">
-        <li class="menuitem active"><a href="index.html">Home</a></li>
+        <li class="menuitem"><a href="index.html">Home</a></li>
         <li class="menuitem"><a href="struktur_rifan.html">Struktur Organisasi</a></li>
         <li class="menuitem"><a href="visimisi_rifan.html">Visi Misi</a></li>
         <li class="menuitem"><a href="fakultas_rifan.html">Fakultas</a></li>
-        <li class="menuitem"><a href="bem_rifan.html">BEM</a></li>
+        <li class="menuitem active"><a href="bem_rifan.html">BEM</a></li>
         <li class="menuitem"><a href="ukm_rifan.html">UKM</a></li>
         <li class="menuitem"><a href="pmb_rifan.html">PMB</a></li>
         <li class="menuitem"><a href="hubungi_rifan.html">Hubungi Kami</a></li>
@@ -203,39 +185,38 @@ body {
     <!-- MAIN CONTENT -->
     <main id="main">
       <section>
-        <h2>Selamat Datang di Universitas Perjuangan</h2>
+        <h2>Badan Eksekutif Mahasiswa (BEM) Universitas Perjuangan</h2>
         <p>
-          Universitas Perjuangan Tasikmalaya (UNPER) adalah universitas swasta yang terletak di Kota Tasikmalaya, Jawa Barat.
-          Universitas ini berada di bawah naungan Yayasan Universitas Siliwangi. Setelah melepas Universitas Siliwangi menjadi perguruan tinggi negeri,
-          yayasan ini merasakan perlunya mendirikan universitas swasta tersendiri untuk meningkatkan kuantitas wisudawan yang berhasil diluluskan.
-        </p>
-        <p>
-          Universitas Perjuangan Tasikmalaya didirikan melalui SK Mendikbud RI No. 603/E/O/2014 tanggal 17 Oktober 2014.
-          Saat ini, UNPER menyelenggarakan 5 fakultas dan 10 program studi yang berkualitas dan relevan dengan kebutuhan industri.
+          Badan Eksekutif Mahasiswa (BEM) Universitas Perjuangan Tasikmalaya merupakan organisasi kemahasiswaan yang berperan sebagai wadah aspirasi, koordinasi, dan penggerak kegiatan mahasiswa di lingkungan UNPER.
         </p>
 
-        <h3>5 Fakultas di UNPER:</h3>
-        <ul class="list-group list-group-flush mb-3">
-          <li class="list-group-item">Fakultas Keguruan dan Ilmu Pendidikan</li>
-          <li class="list-group-item">Fakultas Ekonomi</li>
-          <li class="list-group-item">Fakultas Teknik</li>
-          <li class="list-group-item">Fakultas Ilmu Kesehatan</li>
-          <li class="list-group-item">Fakultas Pertanian</li>
+        <h3>Visi BEM UNPER</h3>
+        <p>
+          Mewujudkan mahasiswa Universitas Perjuangan yang aktif, kritis, kreatif, dan berintegritas tinggi untuk membawa perubahan positif bagi kampus dan masyarakat.
+        </p>
+
+        <h3>Misi BEM UNPER</h3>
+        <ul>
+          <li>Menjadi penghubung antara mahasiswa dan pihak universitas dalam menyampaikan aspirasi.</li>
+          <li>Meningkatkan partisipasi mahasiswa dalam kegiatan sosial, akademik, dan kewirausahaan.</li>
+          <li>Mengembangkan potensi kepemimpinan dan soft skill mahasiswa.</li>
+          <li>Mewujudkan sinergi antar organisasi kemahasiswaan di lingkungan UNPER.</li>
         </ul>
 
-        <h3>10 Program Studi di UNPER:</h3>
-        <ol class="list-group list-group-numbered">
-          <li class="list-group-item">S1 Pendidikan Guru Sekolah Dasar (PGSD)</li>
-          <li class="list-group-item">S1 Pendidikan Bahasa Inggris (PBI)</li>
-          <li class="list-group-item">S1 Manajemen</li>
-          <li class="list-group-item">S1 Akuntansi</li>
-          <li class="list-group-item">S1 Teknik Informatika</li>
-          <li class="list-group-item">S1 Teknik Sipil</li>
-          <li class="list-group-item">S1 Farmasi</li>
-          <li class="list-group-item">S1 Agroteknologi</li>
-          <li class="list-group-item">S1 Agribisnis</li>
-          <li class="list-group-item">S1 Peternakan</li>
-        </ol>
+        <h3>Struktur Kepengurusan BEM UNPER</h3>
+        <ul>
+          <li><strong>Presiden Mahasiswa:</strong> [Nama Ketua BEM]</li>
+          <li><strong>Wakil Presiden Mahasiswa:</strong> [Nama Wakil]</li>
+          <li><strong>Departemen Dalam Negeri</strong> – Bidang administrasi dan koordinasi organisasi internal.</li>
+          <li><strong>Departemen Luar Negeri</strong> – Bidang hubungan eksternal antar universitas dan lembaga.</li>
+          <li><strong>Departemen PSDM</strong> – Pengembangan Sumber Daya Mahasiswa.</li>
+          <li><strong>Departemen Seni & Olahraga</strong> – Penggerak kegiatan seni, budaya, dan olahraga mahasiswa.</li>
+          <li><strong>Departemen Sosial Masyarakat</strong> – Kegiatan pengabdian masyarakat dan sosial.</li>
+        </ul>
+
+        <p>
+          BEM UNPER menjadi representasi semangat juang mahasiswa untuk terus berkontribusi dan berkarya bagi kemajuan kampus serta masyarakat luas.
+        </p>
       </section>
     </main>
   </div>

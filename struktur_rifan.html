@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Universitas Perjuangan Tasikmalaya</title>
+<title>Struktur Organisasi - Universitas Perjuangan Tasikmalaya</title>
 
 <!-- Font Google -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@ body {
   line-height: 1.6;
 }
 
-/* Container utama tetap sama */
+/* Container utama */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -42,7 +42,7 @@ body {
   overflow: hidden;
 }
 
-/* --- Header Styling --- */
+/* Header */
 #top {
   display: flex;
   align-items: center;
@@ -67,12 +67,12 @@ body {
   opacity: 0.9;
 }
 
-/* --- Main Layout Wrapper --- */
+/* Wrapper */
 .wrapper {
   display: flex;
 }
 
-/* --- Navigation Menu Styling --- */
+/* Menu */
 #menubar {
   width: 220px;
   background-color: #f4f4f4;
@@ -105,7 +105,7 @@ body {
   border-left: 4px solid #004d40;
 }
 
-/* --- Main Content Styling --- */
+/* Main content */
 #main {
   flex-grow: 1;
   padding: 30px;
@@ -122,15 +122,6 @@ body {
   margin-bottom: 15px;
 }
 
-#main ul, #main ol {
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-#main li {
-  margin-bottom: 8px;
-}
-
 #main a {
   color: #00796b;
   text-decoration: none;
@@ -140,7 +131,34 @@ body {
   text-decoration: underline;
 }
 
-/* --- Footer Styling --- */
+/* Struktur organisasi */
+.org-chart {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.org-chart ul {
+  list-style-type: none;
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+.org-chart li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-left: 5px solid #00796b;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.org-chart li strong {
+  color: #004d40;
+  display: block;
+  font-size: 1.1em;
+}
+
+/* Footer */
 #bottom {
   text-align: center;
   padding: 20px;
@@ -153,7 +171,7 @@ body {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-/* --- Responsive dengan Bootstrap Utility --- */
+/* Responsive */
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column;
@@ -189,8 +207,8 @@ body {
     <!-- NAVIGATION -->
     <nav id="menubar">
       <ul id="menulist">
-        <li class="menuitem active"><a href="index.html">Home</a></li>
-        <li class="menuitem"><a href="struktur_rifan.html">Struktur Organisasi</a></li>
+        <li class="menuitem"><a href="index.html">Home</a></li>
+        <li class="menuitem active"><a href="struktur_rifan.html">Struktur Organisasi</a></li>
         <li class="menuitem"><a href="visimisi_rifan.html">Visi Misi</a></li>
         <li class="menuitem"><a href="fakultas_rifan.html">Fakultas</a></li>
         <li class="menuitem"><a href="bem_rifan.html">BEM</a></li>
@@ -203,39 +221,51 @@ body {
     <!-- MAIN CONTENT -->
     <main id="main">
       <section>
-        <h2>Selamat Datang di Universitas Perjuangan</h2>
-        <p>
-          Universitas Perjuangan Tasikmalaya (UNPER) adalah universitas swasta yang terletak di Kota Tasikmalaya, Jawa Barat.
-          Universitas ini berada di bawah naungan Yayasan Universitas Siliwangi. Setelah melepas Universitas Siliwangi menjadi perguruan tinggi negeri,
-          yayasan ini merasakan perlunya mendirikan universitas swasta tersendiri untuk meningkatkan kuantitas wisudawan yang berhasil diluluskan.
-        </p>
-        <p>
-          Universitas Perjuangan Tasikmalaya didirikan melalui SK Mendikbud RI No. 603/E/O/2014 tanggal 17 Oktober 2014.
-          Saat ini, UNPER menyelenggarakan 5 fakultas dan 10 program studi yang berkualitas dan relevan dengan kebutuhan industri.
-        </p>
+        <h2>Struktur Organisasi Universitas Perjuangan</h2>
+        <p>Berikut adalah bagan struktur organisasi Universitas Perjuangan Tasikmalaya yang menjadi dasar tata kelola dan operasional universitas.</p>
 
-        <h3>5 Fakultas di UNPER:</h3>
-        <ul class="list-group list-group-flush mb-3">
-          <li class="list-group-item">Fakultas Keguruan dan Ilmu Pendidikan</li>
-          <li class="list-group-item">Fakultas Ekonomi</li>
-          <li class="list-group-item">Fakultas Teknik</li>
-          <li class="list-group-item">Fakultas Ilmu Kesehatan</li>
-          <li class="list-group-item">Fakultas Pertanian</li>
+        <h3>Pimpinan Universitas</h3>
+        <ul class="org-chart">
+          <li>
+            <strong>Rektor</strong>
+            <span>(Nama Pejabat Rektor)</span>
+            <ul>
+              <li>
+                <strong>Wakil Rektor I (Bidang Akademik & Kemahasiswaan)</strong>
+                <span>(Nama Pejabat Wakil Rektor I)</span>
+              </li>
+              <li>
+                <strong>Wakil Rektor II (Bidang Keuangan, SDM & Umum)</strong>
+                <span>(Nama Pejabat Wakil Rektor II)</span>
+              </li>
+              <li>
+                <strong>Wakil Rektor III (Bidang Riset, Inovasi & Kerjasama)</strong>
+                <span>(Nama Pejabat Wakil Rektor III)</span>
+              </li>
+            </ul>
+          </li>
         </ul>
 
-        <h3>10 Program Studi di UNPER:</h3>
-        <ol class="list-group list-group-numbered">
-          <li class="list-group-item">S1 Pendidikan Guru Sekolah Dasar (PGSD)</li>
-          <li class="list-group-item">S1 Pendidikan Bahasa Inggris (PBI)</li>
-          <li class="list-group-item">S1 Manajemen</li>
-          <li class="list-group-item">S1 Akuntansi</li>
-          <li class="list-group-item">S1 Teknik Informatika</li>
-          <li class="list-group-item">S1 Teknik Sipil</li>
-          <li class="list-group-item">S1 Farmasi</li>
-          <li class="list-group-item">S1 Agroteknologi</li>
-          <li class="list-group-item">S1 Agribisnis</li>
-          <li class="list-group-item">S1 Peternakan</li>
-        </ol>
+        <h3>Pelaksana Administrasi</h3>
+        <ul class="org-chart">
+          <li><strong>Kepala Biro Administrasi Akademik dan Kemahasiswaan (BAAK)</strong><span>(Nama Kepala Biro)</span></li>
+          <li><strong>Kepala Biro Administrasi Umum dan Keuangan (BAUK)</strong><span>(Nama Kepala Biro)</span></li>
+        </ul>
+
+        <h3>Lembaga Penunjang</h3>
+        <ul class="org-chart">
+          <li><strong>Ketua Lembaga Penelitian dan Pengabdian kepada Masyarakat (LPPM)</strong><span>(Nama Ketua Lembaga)</span></li>
+          <li><strong>Ketua Lembaga Penjaminan Mutu (LPM)</strong><span>(Nama Ketua Lembaga)</span></li>
+        </ul>
+
+        <h3>Pimpinan Fakultas (Dekanat)</h3>
+        <ul class="org-chart">
+          <li><strong>Dekan Fakultas Keguruan dan Ilmu Pendidikan (FKIP)</strong><span>(Nama Dekan)</span></li>
+          <li><strong>Dekan Fakultas Ekonomi (FE)</strong><span>(Nama Dekan)</span></li>
+          <li><strong>Dekan Fakultas Teknik (FT)</strong><span>(Nama Dekan)</span></li>
+          <li><strong>Dekan Fakultas Ilmu Kesehatan (FIK)</strong><span>(Nama Dekan)</span></li>
+          <li><strong>Dekan Fakultas Pertanian (Faperta)</strong><span>(Nama Dekan)</span></li>
+        </ul>
       </section>
     </main>
   </div>
