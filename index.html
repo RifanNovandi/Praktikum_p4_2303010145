@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Perjuangan Tasikmalaya</title>
+    <style>
+        /* === STYLE DASAR === */
+        body {
+            font-family: "Lucida Sans", Verdana, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            min-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        /* === BAGIAN ATAS (HEADER) === */
+        #top {
+            background-color: #04AA6D;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        #top h1 {
+            margin: 0;
+        }
+
+        /* === MENU DI KIRI === */
+        #menubar {
+            width: 200px;
+            float: left;
+        }
+
+        #menulist {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menuitem {
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            border-radius: 4px;
+            margin: 4px 0;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .menuitem a {
+            text-decoration: none;
+            color: #000000;
+            display: block;
+        }
+
+        .menuitem:hover {
+            background-color: #ffffff;
+        }
+
+        .menuitem:first-child {
+            background-color: #04AA6D;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* === BAGIAN UTAMA === */
+        #main {
+            margin-left: 220px;
+            margin-right: 220px;
+            background-color: white;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        #main h1 {
+            color: #04AA6D;
+        }
+
+        /* === SIDEBAR KANAN === */
+        #sidebar {
+            background-color: #32a4e7;
+            color: #ffffff;
+            padding: 10px;
+            width: 180px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            border-radius: 6px;
+        }
+
+        /* === BAGIAN BAWAH (FOOTER) === */
+        #bottom {
+            border: 1px solid #d4d4d4;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            font-size: 90%;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        /* === RESPONSIVE MODE === */
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+            }
+
+            #menubar {
+                width: 100%;
+                float: none;
+                margin-bottom: 10px;
+            }
+
+            #main {
+                margin: 0;
+            }
+
+            #sidebar {
+                position: relative;
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container wrapper">
+
+        <!-- BAGIAN HEADER -->
+        <div id="top">
+            <h1>UNIVERSITAS PERJUANGAN</h1>
+            <p>Cageur Bageur Bener Pinter Tur Singer</p>
+        </div>
+
+        <!-- MENU KIRI -->
+        <div id="menubar">
+            <ul id="menulist">
+                <li class="menuitem"><a href="index.html">Home</a></li>
+                <li class="menuitem"><a href="#">Struktur Organisasi</a></li>
+                <li class="menuitem"><a href="#">Visi Misi</a></li>
+                <li class="menuitem"><a href="#">Fakultas</a></li>
+                <li class="menuitem"><a href="#">BEM</a></li>
+            </ul>
+        </div>
+
+        <!-- KONTEN UTAMA -->
+        <div id="main">
+            <h1>Selamat Datang</h1>
+            <p>
+                Universitas Perjuangan Tasikmalaya atau disingkat UNPER, adalah sebuah universitas swasta
+                yang terletak di Kota Tasikmalaya, Jawa Barat. Universitas ini berada di bawah naungan Yayasan Universitas Siliwangi.
+                Setelah melepas Universitas Siliwangi menjadi perguruan tinggi negeri, Yayasan Universitas Siliwangi
+                merasakan perlunya mengelola universitas swasta tersendiri untuk meningkatkan kuantitas wisudawan yang berhasil
+                diluluskan. Untuk itu, dibangunlah Universitas Perjuangan Tasikmalaya.
+            </p>
+
+            <h3>5 Fakultas di UNPER:</h3>
+            <ul>
+                <li>Fakultas Keguruan dan Ilmu Pendidikan</li>
+                <li>Fakultas Ekonomi</li>
+                <li>Fakultas Teknik</li>
+                <li>Fakultas Ilmu Kesehatan</li>
+                <li>Fakultas Pertanian</li>
+            </ul>
+
+            <h3>10 Program Studi di UNPER:</h3>
+            <ol>
+                <li>S1 Pendidikan Guru Sekolah Dasar (PGSD)</li>
+                <li>S1 Pendidikan Bahasa Inggris (PBI)</li>
+                <li>S1 Manajemen</li>
+                <li>S1 Akuntansi</li>
+                <li>S1 Teknik Informatika</li>
+                <li>S1 Teknik Sipil</li>
+                <li>S1 Farmasi</li>
+                <li>S1 Agroteknologi</li>
+                <li>S1 Agribisnis</li>
+                <li>S1 Peternakan</li>
+            </ol>
+        </div>
+
+        <!-- SIDEBAR KANAN -->
+        <div id="sidebar">
+            <h3>Side-Bar</h3>
+            <p>Anda dapat mengisi sidebar ini dengan konten apapun yang Anda inginkan.</p>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="bottom">
+            Copyright 2014 - 2025 © Universitas Perjuangan
+        </div>
+    </div>
+</body>
+</html>
