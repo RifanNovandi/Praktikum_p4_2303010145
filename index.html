@@ -10,7 +10,11 @@
             font-family: "Lucida Sans", Verdana, sans-serif;
             margin: 20px;
             line-height: 1.6;
-            background-color: #f9f9f9;
+            /* Perubahan sesuai instruksi b */
+            background-image: url('fotogedungunper.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
         }
 
         .container {
@@ -29,10 +33,19 @@
             padding: 15px;
             border-radius: 4px;
             text-align: center;
+            overflow: auto; /* Menambahkan ini agar clear float */
         }
 
         #top h1 {
             margin: 0;
+            display: inline-block; /* Agar bisa berdampingan dengan logo */
+        }
+        
+        /* Style untuk logo */
+        #logo {
+            float: left;
+            height: 60px; /* Sesuaikan ukuran logo */
+            margin-right: 20px;
         }
 
         /* === MENU DI KIRI === */
@@ -76,10 +89,12 @@
         #main {
             margin-left: 220px;
             margin-right: 220px;
-            background-color: white;
             border-radius: 6px;
             padding: 15px;
             box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            /* Perubahan sesuai instruksi c */
+            background-color: rgba(8, 8, 8, 0.6);
+            color: white;
         }
 
         #main h1 {
@@ -101,12 +116,14 @@
         /* === BAGIAN BAWAH (FOOTER) === */
         #bottom {
             border: 1px solid #d4d4d4;
-            background-color: #f1f1f1;
             text-align: center;
             padding: 10px;
             font-size: 90%;
             border-radius: 6px;
             margin-top: 20px;
+            /* Perubahan sesuai instruksi d */
+            background-color: transparent;
+            color: white;
         }
 
         /* === RESPONSIVE MODE === */
@@ -136,13 +153,12 @@
 <body>
     <div class="container wrapper">
 
-        <!-- BAGIAN HEADER -->
         <div id="top">
+            <img id="logo" src="https://unper.ac.id/wp-content/uploads/2023/10/logo-unper-3-300x300.png" alt="Logo Unper">
             <h1>UNIVERSITAS PERJUANGAN</h1>
             <p>Cageur Bageur Bener Pinter Tur Singer</p>
         </div>
 
-        <!-- MENU KIRI -->
         <div id="menubar">
             <ul id="menulist">
                 <li class="menuitem"><a href="index.html">Home</a></li>
@@ -153,7 +169,6 @@
             </ul>
         </div>
 
-        <!-- KONTEN UTAMA -->
         <div id="main">
             <h1>Selamat Datang</h1>
             <p>
@@ -188,13 +203,11 @@
             </ol>
         </div>
 
-        <!-- SIDEBAR KANAN -->
         <div id="sidebar">
             <h3>Side-Bar</h3>
             <p>Anda dapat mengisi sidebar ini dengan konten apapun yang Anda inginkan.</p>
         </div>
 
-        <!-- FOOTER -->
         <div id="bottom">
             Copyright 2014 - 2025 © Universitas Perjuangan
         </div>
