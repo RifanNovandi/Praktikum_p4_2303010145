@@ -4,213 +4,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universitas Perjuangan Tasikmalaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* === STYLE DASAR === */
+        /* === [PEMBARUAN] STYLE DASAR === */
         body {
-            font-family: "Lucida Sans", Verdana, sans-serif;
-            margin: 20px;
+            font-family: 'Poppins', sans-serif; /* Font baru */
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
-            /* Perubahan sesuai instruksi b */
             background-image: url('fotogedungunper.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
+            color: #333;
         }
 
         .container {
-            min-width: 900px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
         }
+        
+        /* Menghapus .wrapper karena tidak diperlukan lagi dengan layout baru */
 
-        .wrapper {
-            position: relative;
-            overflow: auto;
-        }
-
-        /* === BAGIAN ATAS (HEADER) === */
+        /* === [PEMBARUAN] BAGIAN ATAS (HEADER) === */
         #top {
             background-color: #04AA6D;
             color: #ffffff;
-            padding: 15px;
-            border-radius: 4px;
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
-            overflow: auto; /* Menambahkan ini agar clear float */
+            display: flex; /* Menggunakan flexbox untuk alignment */
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        #top h1 {
-            margin: 0;
-            display: inline-block; /* Agar bisa berdampingan dengan logo */
-        }
-        
-        /* Style untuk logo */
         #logo {
-            float: left;
-            height: 60px; /* Sesuaikan ukuran logo */
-            margin-right: 20px;
+            height: 70px;
+            margin-right: 25px;
         }
 
-        /* === MENU DI KIRI === */
-        #menubar {
-            width: 200px;
-            float: left;
+        #top-text h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        #top-text p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        /* === [PEMBARUAN] MENU NAVIGASI (Sebelumnya Menu Kiri) === */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            margin-top: 20px;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         #menulist {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex; /* Membuat menu menjadi horizontal */
+            justify-content: center;
+            flex-wrap: wrap; /* Agar responsif di layar kecil */
         }
 
-        .menuitem {
-            background-color: #f1f1f1;
-            border: 1px solid #d4d4d4;
-            border-radius: 4px;
-            margin: 4px 0;
-            padding: 8px;
-            cursor: pointer;
-        }
-
-        .menuitem a {
+        #menulist li a {
             text-decoration: none;
-            color: #000000;
+            color: white;
+            padding: 12px 20px;
             display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transisi halus */
         }
 
-        .menuitem:hover {
-            background-color: #ffffff;
-        }
-
-        .menuitem:first-child {
+        #menulist li a:hover, #menulist li a.active {
             background-color: #04AA6D;
             color: white;
-            font-weight: bold;
         }
 
-        /* === BAGIAN UTAMA === */
-        #main {
-            margin-left: 220px;
-            margin-right: 220px;
-            border-radius: 6px;
-            padding: 15px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-            /* Perubahan sesuai instruksi c */
-            background-color: rgba(8, 8, 8, 0.6);
-            color: white;
-        }
-
-        #main h1 {
-            color: #04AA6D;
-        }
-
-        /* === SIDEBAR KANAN === */
-        #sidebar {
-            background-color: #32a4e7;
-            color: #ffffff;
-            padding: 10px;
-            width: 180px;
-            top: 0;
-            right: 0;
-            position: absolute;
-            border-radius: 6px;
-        }
-
-        /* === BAGIAN BAWAH (FOOTER) === */
-        #bottom {
-            border: 1px solid #d4d4d4;
-            text-align: center;
-            padding: 10px;
-            font-size: 90%;
-            border-radius: 6px;
+        /* === [PEMBARUAN] LAYOUT KONTEN UTAMA & SIDEBAR === */
+        .content-wrapper {
+            display: flex;
+            gap: 20px; /* Jarak antara konten utama dan sidebar */
             margin-top: 20px;
-            /* Perubahan sesuai instruksi d */
-            background-color: transparent;
-            color: white;
+        }
+        
+        #main {
+            flex: 3; /* Konten utama mengambil 3 bagian ruang */
+            background-color: rgba(255, 255, 255, 0.9); /* Latar belakang lebih cerah */
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        /* === RESPONSIVE MODE === */
+        #main h1, #main h3 {
+            color: #04AA6D;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        #sidebar {
+            flex: 1; /* Sidebar mengambil 1 bagian ruang */
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        #sidebar h3 {
+             color: #04AA6D;
+        }
+
+        /* === [PEMBARUAN] BAGIAN BAWAH (FOOTER) === */
+        #bottom {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* === [PEMBARUAN] RESPONSIVE MODE === */
         @media (max-width: 768px) {
-            body {
-                margin: 10px;
+            .content-wrapper {
+                flex-direction: column; /* Mengubah layout menjadi vertikal di layar kecil */
             }
-
-            #menubar {
-                width: 100%;
-                float: none;
-                margin-bottom: 10px;
+            #top {
+                flex-direction: column;
+                text-align: center;
             }
-
-            #main {
-                margin: 0;
-            }
-
-            #sidebar {
-                position: relative;
-                width: 100%;
-                margin-top: 10px;
+            #logo {
+                margin: 0 0 15px 0;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container wrapper">
+    <div class="container">
 
-        <div id="top">
+        <header id="top">
             <img id="logo" src="https://unper.ac.id/wp-content/uploads/2023/10/logo-unper-3-300x300.png" alt="Logo Unper">
-            <h1>UNIVERSITAS PERJUANGAN</h1>
-            <p>Cageur Bageur Bener Pinter Tur Singer</p>
-        </div>
+            <div id="top-text">
+                 <h1>UNIVERSITAS PERJUANGAN</h1>
+                 <p>Cageur Bageur Bener Pinter Tur Singer</p>
+            </div>
+        </header>
 
-        <div id="menubar">
+        <nav>
             <ul id="menulist">
-                <li class="menuitem"><a href="index.html">Home</a></li>
-                <li class="menuitem"><a href="#">Struktur Organisasi</a></li>
-                <li class="menuitem"><a href="#">Visi Misi</a></li>
-                <li class="menuitem"><a href="#">Fakultas</a></li>
-                <li class="menuitem"><a href="#">BEM</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="struktur_[NAMA].html">Struktur Organisasi</a></li>
+                <li><a href="visimisi_[NAMA].html">Visi Misi</a></li>
+                <li><a href="fakultas_[NAMA].html">Fakultas</a></li>
+                <li><a href="bem_[NAMA].html">BEM</a></li>
+                <li><a href="ukm_[NAMA].html">UKM</a></li>
+                <li><a href="pmb_[NAMA].html">PMB</a></li>
+                <li><a href="hubungi_[NAMA].html">Hubungi Kami</a></li>
             </ul>
+        </nav>
+
+        <div class="content-wrapper">
+            <main id="main">
+                <h1>Selamat Datang di Universitas Perjuangan</h1>
+                <p>
+                    Universitas Perjuangan Tasikmalaya atau disingkat UNPER, adalah sebuah universitas swasta yang terletak di Kota Tasikmalaya, Jawa Barat. Universitas ini berada di bawah naungan Yayasan Universitas Siliwangi. Setelah melepas Universitas Siliwangi menjadi perguruan tinggi negeri, Yayasan Universitas Siliwangi merasakan perlunya mengelola universitas swasta tersendiri untuk meningkatkan kuantitas wisudawan yang berhasil diluluskan. Untuk itu, dibangunlah Universitas Perjuangan Tasikmalaya.
+                </p>
+
+                <h3>5 Fakultas di UNPER:</h3>
+                <ul>
+                    <li>Fakultas Keguruan dan Ilmu Pendidikan</li>
+                    <li>Fakultas Ekonomi</li>
+                    <li>Fakultas Teknik</li>
+                    <li>Fakultas Ilmu Kesehatan</li>
+                    <li>Fakultas Pertanian</li>
+                </ul>
+
+                <h3>10 Program Studi di UNPER:</h3>
+                <ol>
+                    <li>S1 Pendidikan Guru Sekolah Dasar (PGSD)</li>
+                    <li>S1 Pendidikan Bahasa Inggris (PBI)</li>
+                    <li>S1 Manajemen</li>
+                    <li>S1 Akuntansi</li>
+                    <li>S1 Teknik Informatika</li>
+                    <li>S1 Teknik Sipil</li>
+                    <li>S1 Farmasi</li>
+                    <li>S1 Agroteknologi</li>
+                    <li>S1 Agribisnis</li>
+                    <li>S1 Peternakan</li>
+                </ol>
+            </main>
+
+            <aside id="sidebar">
+                <h3>Info Tambahan</h3>
+                <p>Sidebar ini bisa diisi dengan pengumuman, link cepat, atau kalender akademik.</p>
+                            </aside>
         </div>
 
-        <div id="main">
-            <h1>Selamat Datang</h1>
-            <p>
-                Universitas Perjuangan Tasikmalaya atau disingkat UNPER, adalah sebuah universitas swasta
-                yang terletak di Kota Tasikmalaya, Jawa Barat. Universitas ini berada di bawah naungan Yayasan Universitas Siliwangi.
-                Setelah melepas Universitas Siliwangi menjadi perguruan tinggi negeri, Yayasan Universitas Siliwangi
-                merasakan perlunya mengelola universitas swasta tersendiri untuk meningkatkan kuantitas wisudawan yang berhasil
-                diluluskan. Untuk itu, dibangunlah Universitas Perjuangan Tasikmalaya.
-            </p>
-
-            <h3>5 Fakultas di UNPER:</h3>
-            <ul>
-                <li>Fakultas Keguruan dan Ilmu Pendidikan</li>
-                <li>Fakultas Ekonomi</li>
-                <li>Fakultas Teknik</li>
-                <li>Fakultas Ilmu Kesehatan</li>
-                <li>Fakultas Pertanian</li>
-            </ul>
-
-            <h3>10 Program Studi di UNPER:</h3>
-            <ol>
-                <li>S1 Pendidikan Guru Sekolah Dasar (PGSD)</li>
-                <li>S1 Pendidikan Bahasa Inggris (PBI)</li>
-                <li>S1 Manajemen</li>
-                <li>S1 Akuntansi</li>
-                <li>S1 Teknik Informatika</li>
-                <li>S1 Teknik Sipil</li>
-                <li>S1 Farmasi</li>
-                <li>S1 Agroteknologi</li>
-                <li>S1 Agribisnis</li>
-                <li>S1 Peternakan</li>
-            </ol>
-        </div>
-
-        <div id="sidebar">
-            <h3>Side-Bar</h3>
-            <p>Anda dapat mengisi sidebar ini dengan konten apapun yang Anda inginkan.</p>
-        </div>
-
-        <div id="bottom">
+        <footer id="bottom">
             Copyright 2014 - 2025 © Universitas Perjuangan
-        </div>
+        </footer>
     </div>
 </body>
 </html>
